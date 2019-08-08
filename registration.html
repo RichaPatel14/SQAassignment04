@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assign4</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="style/style.css" />
+   <script type="text/javascript" src="js/script.js"></script>  
+</head>
+<body>
+
+
+<div class="container" >
+	<div class="jumbotron">
+		<h1><i class="fas fa-car"></i> Car Details</h1>
+		<p> There are some cars that you can purchase..</p>
+	</div>
+</div>
+
+
+<div class="container">
+	<div class="jumbotron jumboClass">
+		<h2 class="carDatas"><center> Sell car here..</center></h2>
+		
+			<form action="search.html"  onsubmit="return storeInfos();">
+				<p>
+					<label>Enter name of the seller:</label>
+					<input type="text" id="cname" onblur="return checkBlank('cname','errorName')" name="cname" pattern="[A-Za-z-]+\s[A-Z-a-z]{1,32}" title="Please enter details like e.g. Kunj Tandel" >
+					<label id="errorName" style="color: red"></label>
+					
+				</p>
+				<p>
+					<label>Address:</label>
+					<textarea id="address" onblur="return checkBlank('address','errorAdd')"></textarea>
+					<label id="errorAdd" style="color: red"></label>
+				</p>
+				<p>
+					<label>Your city:</label>
+					<input type="text" id="city" onblur="return checkBlank('city','errorCity')" pattern="[A-Za-z]{1,15}" title="Please enter details like e.g. Waterloo" name="city">
+					<label id="errorCity" style="color: red"></label>
+				</p>
+				<p>
+					<label>Your phone number (format DDD-DDD-DDDD):</label>
+					<input type="tel" id="phone" onblur="return checkBlank('phone','errorphone')" name="phoneNumber" pattern="^\d{3}-\d{3}-\d{4}$" title="Phone Number should like e.g. 123-123-1234" placeholder="123-123-1234">
+					<label id="errorphone" style="color: red"></label>
+				</p>
+				<p>
+					<label>Enter your email address:</label>
+					<input type="email" id="email" onblur="checkemailId()" name="email" title="Email address should like e.g. abcd@abc.com" placeholder="abcd@abc.com" >
+					<label id="errorEmail" style="color: red"></label>
+				</p>
+				<p>
+					<label>Enter the vehicle make, model and year:</label>
+					<input type="text" id="vehicle" onblur="return checkBlank('vehicle','errorveh')" name="vehicle" pattern="[A-Za-z-]+\s[A-Za-z-0-9]+\s[0-9]{4}" title="Please enter details like e.g.BMW 328i 2012" placeholder="BMW 328i 2012" >
+					<label id="errorveh" style="color: red"></label>
+				</p>
+				<p>
+                    <label hidden id="success"></label>
+					<input type="reset" name="clear" value="Clear">
+				
+				<input type="submit" id="reg" name="register" value="Register">
+
+				
+			</p>
+			</form>
+			
+	</div>
+</div>
+</body>
+</html>

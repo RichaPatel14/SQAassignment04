@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Assign4</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="style/style.css" />
+   <script type="text/javascript" src="js/script.js"></script>  
+</head>
+
+<body onload="onload()">
+    <div class="container">
+        <div class="jumbotron">
+            <h1><i class="fas fa-car"></i> Car Details</h1>
+            <p> There are some cars that you can purchase..</p>
+        </div>
+    </div>
+    <div class="mainIntroduction">
+        <div class="container">
+		 <div class="jumbotron">
+            <form onsubmit="return false">
+                <div class="row">
+                    <div class="col">
+                        <div class="searchBox">
+                            <span class="titleHead">Search For Car Details</span>
+                            <div class="input-group">
+                                <input type="text" id="search" class="form-control" name="searchInfo" id="searchInfo" title="Enter Keyword" placeholder="BMW 328i 2012" required="">
+                                <span class="input-group-btn">
+      <input type="button" class="btn btn-default" id="searchButton" onclick="CarSearch(); return false;" value="Search">
+      </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+			   </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron jumboClass1" id="carInformation">
+            <h1>Stored Car Information</h1>
+            <div>
+                <h4 class="storedCarData" id="storeDetails"></h4>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
